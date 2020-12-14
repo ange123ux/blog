@@ -6,7 +6,6 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_uploads import UploadSet,configure_uploads,IMAGES
 
-
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
@@ -14,13 +13,8 @@ login_manager.login_view = 'auth.login'
 db = SQLAlchemy()
 bootstap = Bootstrap()
 
-
-
 photos = UploadSet('photos',IMAGES)
 mail = Mail()
-
-
-
 
 def create_app(mode):
     app = Flask(__name__)
@@ -42,9 +36,6 @@ def create_app(mode):
     mail.init_app(app)
     
     app.config['SECRET_KEY'] = 'any secret string'
-    # setting config
-    # from .requests import configure_request
-    # configure_request(app)
 
     # configure UploadSet
     configure_uploads(app,photos)
