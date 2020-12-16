@@ -5,8 +5,8 @@ from app import db
 
 class BlogModelTest(unittest.TestCase):
     def setUp(self):
-        self.user_joseph = User(username='cha', password='chako', email='test@test.com')
-        self.new_blog = Blog(id=1, title='Test', content='This is a test blog', user_id=self.user_joseph.id)
+        self.user_ange = User(username='cha', password='chako', email='uuwange@gmail.com')
+        self.new_blog = Blog(id=1, title='Test', content='This is a test blog', user_id=self.user_ange.id)
 
     def tearDown(self):
         Blog.query.delete()
@@ -15,7 +15,7 @@ class BlogModelTest(unittest.TestCase):
     def test_check_instance_variables(self):
         self.assertEquals(self.new_blog.title, 'Test')
         self.assertEquals(self.new_blog.content, 'This is a test blog')
-        self.assertEquals(self.new_blog.user_id, self.user_joseph.id)
+        self.assertEquals(self.new_blog.user_id, self.user_ange.id)
 
     def test_save_blog(self):
         self.new_blog.save()

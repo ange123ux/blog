@@ -12,9 +12,9 @@
                     <div class="bg mb-2" >
                         <hr>
                         <div class="row">
-                            <div class="col-md-2">
+                            <!-- <div class="col-md-2">
                                 <img class="rounded-circle blog-img mr-10" src="{{ url_for('static', filename='photos/' + blog.user.profile_pic_path) }}">
-                            </div>
+                            </div> -->
                             <div class="col-md-6">
                                 <p>By <span style="color: rgb(6, 6, 158)">{{blog.user.username}}</span>  on {{blog.posted.strftime('%d-%m-%Y')}}</p>
                                 <h3>Tittle: <a href="{{url_for('main.blog',id = blog.id)}}">{{blog.title}}</a></h3>

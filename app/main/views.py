@@ -4,13 +4,11 @@ from app.models import User,Blog,Comment,Subscriber
 from .forms import UpdateProfile,CreateBlog
 from .. import db
 from app.requests import get_quotes
-# from flask import request
 from flask_login import login_required,current_user
 from ..email import mail_message
 import secrets
 import os
 from PIL import Image
-
 
 @main.route('/')
 def index():
@@ -77,7 +75,7 @@ def new_blog():
         blog = Blog(title=title,content=content,user_id=user_id)
         blog.save()
     for subscriber in subscribers:
-        # mail_message("New Blog Post","email/new_blog",subscriber.email,blog=blog)
+            # mail_message("New Blog Post","email/new_blog",subscriber.email,blog=blog)
         return redirect(url_for('main.index'))
         flash('You Posted a new Blog')
     return render_template('newblog.html', form = form)
@@ -122,7 +120,7 @@ def subscribe():
     email = request.form.get('subscriber')
     new_subscriber = Subscriber(email = email)
     new_subscriber.save_subscriber()
-    # mail_message("Subscribed to Blogging","email/welcome_subscriber",new_subscriber.email,new_subscriber=new_subscriber)
+    mail_message("Subscribed to Blog-Post","email/welcome_subscriber",new_subscriber.email,new_subscriber=new_subscriber)
     flash('Sucessfuly subscribed')
     return redirect(url_for('main.index'))
 
@@ -133,7 +131,7 @@ def delete_post(blog_id):
     if blog.user != current_user:
         abort(403)
     blog.delete()
-    flash("Your Blog is succesfully deleted!")
+    flash("You have deleted your Blog succesfully!")
     return redirect(url_for('main.index'))
 
 
