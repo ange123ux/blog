@@ -100,7 +100,7 @@ class Subscriber(db.Model):
 
     def save_subscriber(self):
         db.session.add(self)
-        db.session.commit()
+        # db.session.commit()
 
     def __repr__(self):
         return f'Subscriber {self.email}'
