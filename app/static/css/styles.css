@@ -1,4 +1,4 @@
-/* .reg{
+.reg{
     padding: 20px;
 }
 .account-img {
@@ -48,12 +48,12 @@ body{
     background-color: rgba(255, 255, 255, 0.924);
     padding: 4px;
     color: black;
-    border-radius: 6px; */
-/* } */
-h1,h4{
-    font-family: 'Poller One', cursive;
+    border-radius: 6px; 
 }
-/* .black{
+ h1,h4{
+    font-family: "Goudy Bookletter 1911", sans-serif;
+}
+.black{
     color: black;
 }
 #modalComment{
@@ -61,5 +61,9 @@ h1,h4{
 }
 .singleblog{
     background-color: rgba(255, 255, 255, 0.924);  
-    color: black; */
-/* } */
+    color: black;
+}
+
+body{
+    font-family: 'Langar', cursive;
+}

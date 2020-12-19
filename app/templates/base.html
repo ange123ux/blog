@@ -7,12 +7,13 @@
                 <title>Blog</title>
 
                 {% block styles %}
-                <link href="https://fonts.googleapis.com/css?family=El+Messiri|IBM+Plex+Sans|Prompt&display=swap" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css?family=Arimo|Farro|Livvic&display=swap" rel="stylesheet">
+                
+                <!-- <link href="https://fonts.googleapis.com/css?family=Arimo|Farro|Livvic&display=swap" rel="stylesheet"> -->
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/css/mdb.min.css" rel="stylesheet">
-                <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
+                <!-- <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet"> -->
+                <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
 
                 <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
                 {% endblock %}
@@ -27,15 +28,15 @@
                 {% block content %}
                 {% endblock %}
 
-                {% block scripts %}
+{% block scripts %}
 
-                <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
-                <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js"></script>
-                {% endblock %}
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js"></script>
+        {% endblock %}
 
         </body>
 </html>

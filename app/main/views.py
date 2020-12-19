@@ -76,7 +76,7 @@ def new_blog():
         blog.save()
     for subscriber in subscribers:
             # mail_message("New Blog Post","email/new_blog",subscriber.email,blog=blog)
-        return redirect(url_for('main.index'))
+        # return redirect(url_for('main.index'))
         flash('You Posted a new Blog')
     return render_template('newblog.html', form = form)
 @main.route('/blog/<id>')
